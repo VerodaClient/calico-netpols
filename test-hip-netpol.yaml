@@ -7,7 +7,6 @@ spec:
   tier: app-hipstershop
   order: 650
   selector: app == "checkoutservice"
-  serviceAccountSelector: ''
   ingress:
     - action: Allow
       protocol: TCP
@@ -59,7 +58,6 @@ spec:
         selector: app == "currencyservice"
         ports:
           - '7000'
-  preDNAT: false
   types:
     - Ingress
     - Egress
