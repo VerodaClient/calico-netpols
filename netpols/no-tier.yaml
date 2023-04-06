@@ -13,7 +13,7 @@ spec:
         selector: app == "frontend"
       destination:
         ports:
-          - '5050'
+          - 5050
   egress:
     - action: Allow
       protocol: TCP
@@ -21,7 +21,7 @@ spec:
       destination:
         selector: app == "currencyservice"
         ports:
-          - '7000'
+          - 7000
   types:
     - Ingress
     - Egress
