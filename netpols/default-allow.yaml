@@ -5,8 +5,6 @@ metadata:
   namespace: hipstershop
 spec:
   tier: default
-  selector: ''
-  serviceAccountSelector: ''
   ingress:
     - action: Allow
       source: {}
