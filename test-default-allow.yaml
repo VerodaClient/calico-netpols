@@ -5,12 +5,16 @@ metadata:
   namespace: hipstershop
 spec:
   tier: default
-  order: 100
-  selector: {}
+  selector: ''
+  serviceAccountSelector: ''
   ingress:
     - action: Allow
+      source: {}
+      destination: {}
   egress:
     - action: Allow
+      source: {}
+      destination: {}
   types:
     - Ingress
     - Egress
