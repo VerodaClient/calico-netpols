@@ -1,0 +1,16 @@
+apiVersion: projectcalico.org/v3
+kind: NetworkPolicy
+metadata:
+  name: default.allow
+  namespace: hipstershop
+spec:
+  tier: default
+  order: 100
+  selector: {}
+  ingress:
+    - action: Allow
+  egress:
+    - action: Allow
+  types:
+    - Ingress
+    - Egress
