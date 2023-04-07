@@ -3,9 +3,10 @@ kind: NetworkPolicy
 metadata:
   labels:
     app.kubernetes.io/managed-by: Helm
-  name: default.aws-cluster-autoscaler-from-prometheus-server-allow
+  name: leon.aws-cluster-autoscaler-from-prometheus-server-allow
   namespace: cluster-base
 spec:
+  tier: leon
   ingress:
     - action: Allow
       destination:
