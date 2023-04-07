@@ -3,7 +3,7 @@ kind: NetworkPolicy
 metadata:
   labels:
     app.kubernetes.io/managed-by: Helm
-  name: aws-cluster-autoscaler-from-prometheus-server-allow
+  name: default.aws-cluster-autoscaler-from-prometheus-server-allow
   namespace: cluster-base
 spec:
   ingress:
