@@ -1,0 +1,21 @@
+apiVersion: projectcalico.org/v3
+kind: NetworkPolicy
+metadata:
+  labels:
+    app.kubernetes.io/managed-by: Helm
+  name: aws-cluster-autoscaler-from-prometheus-server-allow
+  namespace: cluster-base
+spec:
+  ingress:
+    - action: Allow
+      destination:
+        namespaceSelector: projectcalico.org/name == 'cluster-base'
+        selector: app.kubernetes.io/name == 'aws-cluster-autoscaler'
+      protocol: TCP
+      source:
+        namespaceSelector: projectcalico.org/name == 'monitor'
+        selector: app.kubernetes.io/name == 'prometheus'
+  order: 10
+  selector: app.kubernetes.io/name == 'aws-cluster-autoscaler'
+  types:
+    - Ingress
